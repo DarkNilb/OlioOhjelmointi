@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harjoitustyö.PackagesController">
+   <children>
+      <Label layoutX="34.0" layoutY="27.0" text="Luo paketti">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="368.0" layoutY="31.0" text="Valitse paketitluokka">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="257.0" text="Paketin lähetys tiedot:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="ReadyButton" layoutX="493.0" layoutY="296.0" mnemonicParsing="false" onAction="#isReady" text="Valmis" />
+      <Button fx:id="backButton" layoutX="493.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#back" text="Peruuta" />
+      <TextField fx:id="PacketName" layoutX="33.0" layoutY="107.0" promptText="Nimi:" />
+      <TextField fx:id="PacketSize" layoutX="33.0" layoutY="141.0" promptText="Koko l." />
+      <TextField fx:id="PacketMass" layoutX="33.0" layoutY="175.0" promptText="Massa Kg" />
+      <CheckBox fx:id="breakableButton" layoutX="33.0" layoutY="210.0" mnemonicParsing="false" text="Särkyvää" />
+      <Label layoutX="33.0" layoutY="89.0" text="Tai luo uusi esine:" />
+      <RadioButton fx:id="firstClassButton" layoutX="368.0" layoutY="59.0" mnemonicParsing="false" text="1. Luokka">
+         <toggleGroup>
+            <ToggleGroup fx:id="tclass" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="secondClassButton" layoutX="368.0" layoutY="89.0" mnemonicParsing="false" text="2. Luokka" toggleGroup="$tclass" />
+      <RadioButton fx:id="thirdClassButton" layoutX="368.0" layoutY="124.0" mnemonicParsing="false" text="3. Luokka" toggleGroup="$tclass" />
+      <ComboBox fx:id="choosePacketButton" layoutX="33.0" layoutY="55.0" prefWidth="150.0" promptText="Esine" />
+      <ComboBox fx:id="StartCityButton" layoutX="33.0" layoutY="296.0" onAction="#LoadStartingAutomat" prefWidth="150.0" promptText="Lähtökaupunki" />
+      <ComboBox fx:id="StartingAutomat" layoutX="33.0" layoutY="344.0" prefWidth="150.0" promptText="Automaatti" />
+      <ComboBox fx:id="TargetAutomat" layoutX="254.0" layoutY="344.0" prefWidth="150.0" promptText="Automaatti" />
+      <ComboBox fx:id="TargetCityButton" layoutX="254.0" layoutY="296.0" onAction="#LoadTargetAutomat" prefWidth="150.0" promptText="Kohdekaupunki" />
+   </children>
+</AnchorPane>
