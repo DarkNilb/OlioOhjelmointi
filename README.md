@@ -1,2 +1,2 @@
 # OlioOhjelmointi
-Oli-ohjelmoinnin harjoitustyö
+Olio-ohjelmoinnin harjoitustyö
